@@ -20,8 +20,18 @@ const Search = () => {
       setResults(data.query.search);
     };
 
-    if (term) {
+    if (term && !results.length) {
       search();
+    } else {
+      const timeoutId = setTimeout(() => {
+        if (term) {
+          search();
+        }
+      }, 1000);
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
     }
   }, [term]);
 
@@ -40,7 +50,7 @@ const Search = () => {
         </div>
         <div className="content">
           <div className="header">{result.title}</div>
-          <span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>
+          <span dangerouslySetInnerHTML={{ __html: result.snippet }} />
         </div>
       </div>
     );
