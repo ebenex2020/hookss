@@ -1,5 +1,6 @@
 // import Accordion from "./components/Accordion";
-import Search from "./components/Search";
+import DropDown from "./components/DropDown";
+// import Search from "./components/Search";
 
 // const mainItems = [
 //   {
@@ -19,13 +20,12 @@ import Search from "./components/Search";
 //   },
 // ];
 
-const App = () => {
-  return (
-    <div>
-      {/* <Accordion items={mainItems} /> */}
-      <Search />
-    </div>
-  );
-};
+const App = () => (
+  <div>
+    {/* <Accordion items={mainItems} /> */}
+    {/* <Search /> */}
+    <DropDown />
+  </div>
+);
 
 export default App;
