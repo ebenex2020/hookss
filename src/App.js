@@ -1,6 +1,8 @@
 // import Accordion from "./components/Accordion";
-import DropDown from "./components/DropDown";
 // import Search from "./components/Search";
+// import DropDown from "./components/DropDown";
+
+import Translate from "./components/Translate";
 
 // const mainItems = [
 //   {
@@ -20,12 +22,49 @@ import DropDown from "./components/DropDown";
 //   },
 // ];
 
-const App = () => (
-  <div>
-    {/* <Accordion items={mainItems} /> */}
-    {/* <Search /> */}
-    <DropDown />
-  </div>
-);
+// const options = [
+//   {
+//     label: "Color Red",
+//     value: "Red",
+//   },
+
+//   {
+//     label: "Color Blue",
+//     value: "Blue",
+//   },
+
+//   {
+//     label: "Shade Of Green",
+//     value: "Green",
+//   },
+// ];
+
+const App = () => {
+  /*
+  const [selected, setSelected] = useState(options[0]);
+  const [showDropDown, setShowDropDown] = useState(true);
+  */
+
+  return (
+    <div>
+      <Translate />
+
+      {/* <Accordion items={mainItems} /> */}
+      {/* <Search /> */}
+
+      {/* <button onClick={() => setShowDropDown(!showDropDown)}>
+        Toggle DropDown
+      </button> */}
+
+      {/* {showDropDown ? (
+        <DropDown
+          selected={selected}
+          onSetChange={setSelected}
+          options={options}
+        />
+      ) : null} */}
+    </div>
+  );
+};
 
 export default App;
